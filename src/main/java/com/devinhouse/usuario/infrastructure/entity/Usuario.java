@@ -2,10 +2,7 @@ package com.devinhouse.usuario.infrastructure.entity;
 
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -18,6 +15,7 @@ import java.util.List;
 @NoArgsConstructor
 @Entity //aponta ao spring que essa é uma tabela do banco de dados
 @Table(name = "usuario") //indica o nome da tabela
+@Builder
 public class Usuario implements UserDetails {  // gerenciador de acessos
 
     @Id //identificador único
